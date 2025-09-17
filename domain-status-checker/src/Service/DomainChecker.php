@@ -58,7 +58,7 @@ class DomainChecker {
         if (stripos($resp, 'redemptionPeriod') !== false) return 'redemption';
         break;
       default:
-        if (stripos($resp, 'no match') !== false || stripos($resp, 'not found') !== false || stripos($resp, 'status: free') !== false) return 'available';
+        if (stripos($resp, 'no match') !== false || stripos($resp, 'not found') !== false || stripos($resp, 'status: free') !== false) return 'available';
         if (stripos($resp, 'registered') !== false || stripos($resp, 'status: active') !== false) return 'registered';
         if (stripos($resp, 'pending delete') !== false) return 'pending delete';
         if (stripos($resp, 'redemption') !== false) return 'redemption';
