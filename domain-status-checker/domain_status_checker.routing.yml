@@ -1,0 +1,40 @@
+domain_status_checker.dashboard:
+  path: '/admin/config/system/domain-status'
+  defaults:
+    _controller: '\Drupal\domain_status_checker\Controller\DashboardController::content'
+    _title: 'Domain Status Dashboard'
+  requirements:
+    _permission: 'administer site configuration'
+
+domain_status_checker.check_now:
+  path: '/admin/config/system/domain-status/check/{domain}'
+  defaults:
+    _controller: '\Drupal\domain_status_checker\Controller\AjaxController::checkNow'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    no_cache: 'TRUE'
+
+domain_status_checker.clear_logs:
+  path: '/admin/config/system/domain-status/clear-logs'
+  defaults:
+    _controller: '\Drupal\domain_status_checker\Controller\AjaxController::clearLogs'
+  requirements:
+    _permission: 'administer site configuration'
+
+domain_status_checker.add_domain:
+  path: '/admin/config/system/domain-status/add'
+  defaults:
+    _form: '\Drupal\domain_status_checker\Form\DomainAddForm'
+    _title: 'Add Domain'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+domain_status_checker.domain_status_report:
+  path: '/admin/config/system/domain-status/report'
+  defaults:
+    _form: '\Drupal\domain_status_checker\Form\DomainStatusReportForm'
+    _title: 'Send Domain Status Report'
+  requirements:
+    _permission: 'administer site configuration'

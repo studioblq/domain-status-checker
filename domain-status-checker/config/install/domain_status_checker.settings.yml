@@ -1,0 +1,6 @@
+# Default settings for Domain Status Checker module
+
+# File: config/install/domain_status_checker.settings.yml
+
+alert_email: 'and.balboni@gmail.com'
+domains: []
