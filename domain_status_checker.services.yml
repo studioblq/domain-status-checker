@@ -1,4 +1,0 @@
-services:
-  domain_status_checker.domain_checker:
-    class: Drupal\domain_status_checker\Service\DomainChecker
-    arguments: ['@database', '@brevo.mail_handler', '@logger.channel.default']
