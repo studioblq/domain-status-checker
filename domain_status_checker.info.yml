@@ -1,7 +1,0 @@
-name: Domain Status Checker
-type: module
-description: 'Monitoraggio dello stato domini via WHOIS e cron.'
-core_version_requirement: ^10
-package: Custom
-dependencies:
-  - drupal:system (>=10.3.6)
